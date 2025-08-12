@@ -1,4 +1,4 @@
-## Install
+## 1.Install
 1.ros2-humble-install
 ```
 sudo apt install git
@@ -8,9 +8,13 @@ chmod +x install_ros2_humble_gazebo.sh
 ./install_ros2_humble_gazebo.sh 
 ```
 ## 2.Build
-2.Build workspace and src
+1.Build workspace and src
 ```
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 ```
+2.Clone
+'''
+git clone https://github.com/ros/ros_tutorials.git -b humble
+'''
 ROS2 humble LINK:https://docs.ros.org/en/humble/index.html
