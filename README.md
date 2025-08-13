@@ -17,7 +17,7 @@ cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
-##3.Check
+## 3.Check
 #1.檢查ROS2相關
 1.檢查 ROS2 版本
 ```
@@ -27,7 +27,7 @@ ros2 --version
 ```
 ros2 pkg executables turtlesim
 ```
-#2.Run Demo Nodes
+# 2.Run Demo Nodes
 C++ Example
 Publisher
 ```
