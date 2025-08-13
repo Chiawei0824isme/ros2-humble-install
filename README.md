@@ -17,8 +17,7 @@ cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
-## 3.Check RO2
-#1.Check ROS2 related
+## 3.Check RO2 related
 1.Version
 ```
 ros2 --version
@@ -37,7 +36,7 @@ Subscriber
 ```
 ros2 run demo_nodes_cpp listener
 ```
-3.Python Example
+Python Example
 Publisher
 ```
 ros2 run demo_nodes_py talker
@@ -46,7 +45,7 @@ Subscriber
 ```
 ros2 run demo_nodes_py listener
 ```
-#Gazebo
+Gazebo
 ```
 gazebo
 ```
