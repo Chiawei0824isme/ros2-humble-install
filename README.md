@@ -1,4 +1,4 @@
-## 1.Install
+# 1.Install
 1.ros2-humble-install
 ```
 sudo apt install git
@@ -7,7 +7,7 @@ cd ros2-humble-install
 chmod +x install_ros2_humble_gazebo.sh
 ./install_ros2_humble_gazebo.sh 
 ```
-## 2.Build
+# 2.Build
 1.Build workspace
 ```
 mkdir -p ~/ros2_ws/src
@@ -17,7 +17,7 @@ cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
-## 3.Check RO2 related
+# 3.Check RO2 related
 1.Version
 ```
 ros2 --version
@@ -45,7 +45,7 @@ Subscriber
 ```
 ros2 run demo_nodes_py listener
 ```
-## 3.Gazebo
+# 4.Gazebo
 ```
 gazebo
 ```
