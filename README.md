@@ -86,9 +86,11 @@ gazebo
 - [Gazebo Documentation](https://gazebosim.org/home)
 - [ROS 2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
 
----
-
 ## License
-This guide is released under the **MIT License**. You are free to use, modify, and distribute it with attribution.
+> ** This guide is released under the **MIT License**. You are free to use, modify, and distribute it with attribution.
 
----
+## Disclaimer & Copyright
+
+> **Disclaimer**: This guide is provided "as is" for educational and reference purposes only. The author makes no warranties, express or implied, and disclaims all liability for any damages or losses arising from the use of this guide. Users assume all risks associated with using this guide.
+
+> **Copyright Notice**: This guide is based on official ROS 2 documentation and open-source community resources, following the open-source spirit for technical learning and communication purposes. All referenced content is properly attributed with appropriate links to original sources.
