@@ -17,5 +17,13 @@ cd ~/ros2_ws/src
 ```
 git clone https://github.com/ros/ros_tutorials.git -b humble
 ```
-
+3.colcon
+```
+cd ~/ros2_ws
+colcon build
+```
+4.Source
+```
+source install/setup.bash
+```
 ROS2 humble LINK:https://docs.ros.org/en/humble/index.html
