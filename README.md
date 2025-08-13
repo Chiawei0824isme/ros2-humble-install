@@ -31,24 +31,24 @@ ros2 pkg executables turtlesim
 C++ Example
 Publisher
 ```
-echo "2. ros2 run demo_nodes_cpp talker"
+ros2 run demo_nodes_cpp talker
 ```
 Subscriber
 ```
-echo "3. ros2 run demo_nodes_cpp listener"
+ros2 run demo_nodes_cpp listener
 ```
 3.Python Example
 Publisher
 ```
-echo "4. ros2 run demo_nodes_py talker"
+ros2 run demo_nodes_py talker
 ```
 Subscriber
 ```
-echo "5. ros2 run demo_nodes_py listener"
+ros2 run demo_nodes_py listener
 ```
 #Gazebo
 ```
-echo "1. gazebo     # 開啟Gazebo"
+gazebo
 ```
 
 ROS2 humble LINK:https://docs.ros.org/en/humble/index.html
