@@ -35,14 +35,14 @@ source /opt/ros/humble/setup.bash
 echo "==== Step 7: 安裝 Gazebo ===="
 sudo apt install -y ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
 echo "==== Step 8: 安裝完成！測試 ROS 2 範例 ===="
+echo "安裝版本 : $ROS_DISTRO"
 echo "開新終端機後輸入以下指令進行測試："
 
-echo "1. $ROS_DISTRO      #確認ROS安裝版本"
-echo "2. gazebo     # 開啟Gazebo"
-echo "3. ros2 run demo_nodes_cpp talker      # C++ 範例發布者"
-echo "4. ros2 run demo_nodes_cpp listener    # C++ 範例訂閱者"
-echo "5. ros2 run demo_nodes_py talker       # Python 範例發布者"
-echo "6. ros2 run demo_nodes_py listener     # Python 範例訂閱者"
+echo "1. gazebo     # 開啟Gazebo"
+echo "2. ros2 run demo_nodes_cpp talker      # C++ 範例發布者"
+echo "3. ros2 run demo_nodes_cpp listener    # C++ 範例訂閱者"
+echo "4. ros2 run demo_nodes_py talker       # Python 範例發布者"
+echo "5. ros2 run demo_nodes_py listener     # Python 範例訂閱者"
 
 echo "==== ROS 2 Humble + Gazebo 安裝完成 ===="
 
