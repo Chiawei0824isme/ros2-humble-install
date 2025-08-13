@@ -33,8 +33,7 @@ fi
 source /opt/ros/humble/setup.bash
 
 echo "==== Step 7: 安裝 Gazebo Fortress（含 ROS 插件） ===="
-sudo apt install -y gazebo fortress ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
-
+sudo apt install -y ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
 echo "==== Step 8: 安裝完成！測試 ROS 2 範例 ===="
 echo "開新終端機後輸入以下指令進行測試："
 echo "1. ros2 run demo_nodes_cpp talker      # C++ 範例發布者"
