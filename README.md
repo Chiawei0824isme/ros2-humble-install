@@ -26,8 +26,8 @@ ros2 --version
 ```
 ros2 pkg executables turtlesim
 ```
-# 2.Run Demo Nodes
-C++ Example
+## 2.Run Demo Nodes
+### C++ Example
 Publisher
 ```
 ros2 run demo_nodes_cpp talker
@@ -36,7 +36,7 @@ Subscriber
 ```
 ros2 run demo_nodes_cpp listener
 ```
-Python Example
+### Python Example
 Publisher
 ```
 ros2 run demo_nodes_py talker
