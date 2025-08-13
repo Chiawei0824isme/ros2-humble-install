@@ -17,13 +17,13 @@ cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
-## 3.Check
-#1.檢查ROS2相關
-1.檢查 ROS2 版本
+## 3.Check RO2
+#1.Check ROS2 related
+1.Version
 ```
 ros2 --version
 ```
-2.ros2 pkg
+2.Pkg
 ```
 ros2 pkg executables turtlesim
 ```
