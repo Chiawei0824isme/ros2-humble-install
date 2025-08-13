@@ -61,4 +61,16 @@ Run Gazebo
 gazebo
 ```
 
-ROS2 humble LINK:https://docs.ros.org/en/humble/index.html
+---
+
+## References
+- [ROS 2 Humble Documentation](https://docs.ros.org/en/humble/index.html)
+- [Gazebo Documentation](https://gazebosim.org/home)
+- [ROS 2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
+
+---
+
+## License
+This guide is released under the **MIT License**. You are free to use, modify, and distribute it with attribution.
+
+---
