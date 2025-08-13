@@ -35,19 +35,12 @@ source /opt/ros/humble/setup.bash
 echo "==== Step 7: 安裝 Gazebo Fortress（含 ROS 插件） ===="
 sudo apt install -y gazebo fortress ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
 
-echo "==== Step 8: 安裝完成！準備互動式測試 ===="
+echo "==== Step 8: 安裝完成！測試 ROS 2 範例 ===="
+echo "開新終端機後輸入以下指令進行測試："
+echo "1. ros2 run demo_nodes_cpp talker      # C++ 範例發布者"
+echo "2. ros2 run demo_nodes_cpp listener    # C++ 範例訂閱者"
+echo "3. ros2 run demo_nodes_py talker       # Python 範例發布者"
+echo "4. ros2 run demo_nodes_py listener     # Python 範例訂閱者"
+echo "==== ROS 2 Humble + Gazebo 安裝完成 ===="
 
-read -p "按 Enter 開啟 C++ 範例發布者 (talker) 視窗..."
-gnome-terminal -- bash -c "echo '=== 這是 C++ 範例發布者 ==='; ros2 run demo_nodes_cpp talker; exec bash"
-
-read -p "按 Enter 開啟 C++ 範例訂閱者 (listener) 視窗..."
-gnome-terminal -- bash -c "echo '=== 這是 C++ 範例訂閱者 ==='; ros2 run demo_nodes_cpp listener; exec bash"
-
-read -p "按 Enter 開啟 Python 範例發布者 (talker) 視窗..."
-gnome-terminal -- bash -c "echo '=== 這是 Python 範例發布者 ==='; ros2 run demo_nodes_py talker; exec bash"
-
-read -p "按 Enter 開啟 Python 範例訂閱者 (listener) 視窗..."
-gnome-terminal -- bash -c "echo '=== 這是 Python 範例訂閱者 ==='; ros2 run demo_nodes_py listener; exec bash"
-
-echo "==== ROS 2 Humble + Gazebo 測試完成 ===="
-echo "=== Script by Chiawei (互動測試版) ==="
+echo "=== Script by Chiawei (優化版) ==="
