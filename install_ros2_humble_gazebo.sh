@@ -34,7 +34,6 @@ echo "==== Step 7: 安裝 Gazebo ===="
 sudo apt install -y ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-source ~/ros2_ws/install/setup.bash
 
 echo "==== Step 8: 安裝完成！測試 ROS 2 範例 ===="
 echo "開新終端機後輸入以下指令進行測試："
