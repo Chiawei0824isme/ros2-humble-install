@@ -17,7 +17,7 @@
 ---
 
 # 1.Install
-1.ros2-humble-install
+ros2-humble-install
 ```
 sudo apt install git
 git clone https://github.com/ChiaweiYu0824/ros2-humble-install.git
@@ -26,7 +26,7 @@ chmod +x install_ros2_humble_gazebo.sh
 ./install_ros2_humble_gazebo.sh 
 ```
 # 2.Build
-1.Build workspace
+Build workspace
 ```
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
