@@ -1,4 +1,20 @@
 # ROS 2 Humble Installation & Verification Guide
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![ROS 2 Version](https://img.shields.io/badge/ROS2-Humble-orange)
+
+# Table of Contents
+1. [Install](#1install)
+2. [Build Workspace](#2build)
+3. [Check](#3check)
+   - [Check ROS 2 Related](#check-ro2-related)
+   - [Run Demo Nodes](#2run-demo-nodes)
+   - [Run Turtlesim](#3run-turtlesim)
+4. [Start Gazebo](#4start-gazebo)
+5. [References](#references)
+6. [License](#license)
+
+---
 
 # 1.Install
 1.ros2-humble-install
@@ -21,11 +37,11 @@ source install/setup.bash
 ```
 # 3.Check
 ## Check RO2 related
-1.Version
+Version
 ```
 ros2 --version
 ```
-2.Pkg
+Pkg
 ```
 ros2 pkg executables turtlesim
 ```
