@@ -17,7 +17,8 @@ cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
-# 3.Check RO2 related
+# 3.Check
+## Check RO2 related
 1.Version
 ```
 ros2 --version
