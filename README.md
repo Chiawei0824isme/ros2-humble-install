@@ -13,6 +13,8 @@
 4. [Start Gazebo](#4start-gazebo)
 5. [References](#references)
 6. [License](#license)
+7. [Disclaimer & Copyright](#disclaimer--copyright)
+
 
 ---
 
