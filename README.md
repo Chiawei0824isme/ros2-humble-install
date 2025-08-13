@@ -55,7 +55,8 @@ Turtle Teleop (Add new terminal)
 ```
 ros2 run turtlesim turtle_teleop_key
 ```
-# 4.Gazebo
+# 4.Start Gazebo
+Run Gazebo 
 ```
 gazebo
 ```
