@@ -98,7 +98,7 @@ gazebo
 - [ROS 2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
 
 ## License
-> ** This guide is released under the **MIT License**. You are free to use, modify, and distribute it with attribution.
+>  This guide is released under the **MIT License**. You are free to use, modify, and distribute it with attribution.
 
 ## Disclaimer & Copyright
 
