@@ -88,7 +88,10 @@ Run Gazebo
 ```
 gazebo
 ```
-
+Launch Gazebo Demo World
+```
+gazebo worlds/willowgarage.world
+```
 ---
 
 ## References
