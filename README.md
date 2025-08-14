@@ -90,7 +90,7 @@ gazebo
 ```
 Launch Gazebo Demo World
 ```
-gazebo worlds/willowgarage.world
+gazebo worlds/rubble.world
 ```
 ---
 
