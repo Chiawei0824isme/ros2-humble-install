@@ -1,3 +1,11 @@
+<div align="center">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+    <img src="https://classic.gazebosim.org/assets/gazebo_vert-af0a0ada204b42b6daca54e98766979e45e011ea22347ffe90580458476d26d6.png" alt="Gazebo" height="180" style="background-color: white; padding: 10px;">
+    <img src="https://docs.ros.org/en/humble/_static/humble-small.png" alt="ROS 2 Humble" height="180">
+    <img src="https://raw.githubusercontent.com/ros-visualization/rviz/kinetic-devel/images/splash.png" alt="RViz2" height="180">
+  </div>
+</div>
+
 # ROS 2 Humble Installation & Verification Guide
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -7,7 +15,7 @@
 1. [Install](#1install)
 2. [Build Workspace](#2build)
 3. [Check](#3check)
-   - [Check ROS 2 Related](#check-ro2-related)
+   - [Check ROS 2 Related](#1check-ros2-related)
    - [Run Demo Nodes](#2run-demo-nodes)
    - [Run Turtlesim](#3run-turtlesim)
 4. [Start Gazebo](#4start-gazebo)
@@ -38,7 +46,7 @@ colcon build
 source install/setup.bash
 ```
 # 3.Check
-## 1.Check RO2 related
+## 1.Check ROS2 related
 Version
 ```
 ros2 --version
@@ -85,6 +93,7 @@ gazebo
 
 ## References
 - [ROS 2 Humble Documentation](https://docs.ros.org/en/humble/index.html)
+- [RViz2](https://docs.ros.org/en/rolling/p/rviz2/__links.html)
 - [Gazebo Documentation](https://gazebosim.org/home)
 - [ROS 2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
 
@@ -96,3 +105,5 @@ gazebo
 > **Disclaimer**: This guide is provided "as is" for educational and reference purposes only. The author makes no warranties, express or implied, and disclaims all liability for any damages or losses arising from the use of this guide. Users assume all risks associated with using this guide.
 
 > **Copyright Notice**: This guide is based on official ROS 2 documentation and open-source community resources, following the open-source spirit for technical learning and communication purposes. All referenced content is properly attributed with appropriate links to original sources.
+
+> **Logos**: Property of respective organizations, used for educational purposes. 
