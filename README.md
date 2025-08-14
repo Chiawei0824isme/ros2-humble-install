@@ -38,7 +38,7 @@ colcon build
 source install/setup.bash
 ```
 # 3.Check
-## Check RO2 related
+## 1.Check RO2 related
 Version
 ```
 ros2 --version
