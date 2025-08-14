@@ -49,7 +49,7 @@ source install/setup.bash
 ## 1.Check ROS2 related
 Version
 ```
-ros2 --version
+echo $ROS_DISTRO
 ```
 Pkg
 ```
