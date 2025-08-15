@@ -191,9 +191,9 @@ export ROBOT_IP=$IPAddress
 export ROS_MASTER_URI=http://$ROBOT_IP:11311
 #--------------------------------------------------------------------------------------------------
 # Alias path 跳轉快捷指令
-alias cw='cd ~/turtlebot3_ws'
-alias cs='cd ~/turtlebot3_ws/src'
-alias cm='cd ~/turtlebot3_ws && colcon build '
+alias cw='cd ~/ros2_ws'
+alias cs='cd ~/ros2_ws/src'
+alias cm='cd ~/ros2_ws && colcon build '
 alias kg='killall -9 gzserver gzclient'
 #--------------------------------------------------------------------------------------------------
 # Bash 終端顯示
