@@ -29,7 +29,7 @@
 # 1.Install
 ros2-humble-install
 ```
-wget -c https://raw.githubusercontent.com/ChiaweiYu0824/ros2-humble-install/main/install_ros2_.sh && chmod +x ./install_ros2_.sh && ./install_ros2_.sh
+wget -c https://raw.githubusercontent.com/ChiaweiYu0824/ros2-humble-install/main/install_ros2.sh && chmod +x ./install_ros2.sh && ./install_ros2.sh
 ```
 # 2.Build
 Build workspace
