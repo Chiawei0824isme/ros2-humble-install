@@ -119,7 +119,8 @@ show_menu() {
 main() {
     check_ubuntu
     show_menu
-    read -p "請選擇安裝選項 (1/2/3): " choice
+    echo -n "請選擇安裝選項 (1/2/3): "
+    read choice
 
     case $choice in
         1)
