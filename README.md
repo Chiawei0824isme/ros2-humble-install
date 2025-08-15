@@ -31,11 +31,11 @@
    - [Run Turtlesim](#3run-turtlesim)
 4. [Start Gazebo](#4start-gazebo)
    - [Set Turtlebot3 Model](#Set-Turtlebot3-Model)
-   - [Gazebo TurtleBot3 Simulation](Gazebo-TurtleBot3-Simulation)
-6. [Letgo TurtleBot3](5.Letgo-TurtleBot3)
-7. [References](#references)
-8. [License](#license)
-9. [Disclaimer & Copyright](#disclaimer--copyright)
+   - [Gazebo TurtleBot3 Simulation](#Gazebo-TurtleBot3-Simulation)
+5. [Letgo TurtleBot3](#5.Letgo-TurtleBot3)
+6. [References](#references)
+7. [License](#license)
+8. [Disclaimer & Copyright](#disclaimer--copyright)
 
 
 ---
