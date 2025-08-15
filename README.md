@@ -33,7 +33,7 @@
    - [Set Turtlebot3 Model](#Set-Turtlebot3-Model)
    - [Gazebo TurtleBot3 Simulation](#Gazebo-TurtleBot3-Simulation)
 5. [Letgo TurtleBot3](#5.Letgo-TurtleBot3)
-6. [Illustrate](#6.Helpful-Instructions)
+6. [Helpful Instructions](#6.Helpful-Instructions)
 7. [References](#references)
 8. [License](#license)
 9. [Disclaimer & Copyright](#disclaimer--copyright)
