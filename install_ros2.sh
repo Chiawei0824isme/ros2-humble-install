@@ -99,7 +99,6 @@ install_turtlebot3() {
     cd ~/turtlebot3_ws && colcon build --symlink-install
 
     print_step "TurtleBot3 安裝完成"
-    echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
     source ~/.bashrc
 
 }
@@ -119,8 +118,7 @@ show_menu() {
 main() {
     check_ubuntu
     show_menu
-    echo -n "請選擇安裝選項 (1/2/3): "
-    read choice
+    read -p "請選擇安裝選項 (1/2/3): " choice
 
     case $choice in
         1)
@@ -170,6 +168,52 @@ main() {
     esac
 
     echo ""
+    print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
+    echo "=== Script by Chiawei ==="
+}
+
+main
+
+}
+
+main
+OSTPC CONFIG---------------------------------------------------------------
+# ROS2 環境配置
+source /opt/ros/humble/setup.bash
+source ~/turtlebot3_ws/install/setup.bash
+source /usr/share/gazebo/setup.sh
+#--------------------------------------------------------------------------------------------------
+# Gazebo 環境配置
+export ROS_DOMAIN_ID=30 #TURTLEBOT3
+export SVGA_VGPU10=0
+export TURTLEBOT3_MODEL=waffle
+#--------------------------------------------------------------------------------------------------
+# ROS_Host 網路配置
+interface=ens33
+export IPAddress=`ifconfig $interface | grep -o 'inet [^ ]*' | cut -d " " -f2`
+export ROS_IP=$IPAddress
+#--------------------------------------------------------------------------------------------------
+# ROS_Master 網路地址
+export ROBOT_IP=$IPAddress
+export ROS_MASTER_URI=http://$ROBOT_IP:11311
+#--------------------------------------------------------------------------------------------------
+# Alias path 跳轉快捷指令
+alias cw='cd ~turtlebot3_ws'
+alias cs='cd ~/turtlebot3_ws/src'
+alias cm='cd ~/turtlebot3_ws && colcon build '
+alias kg='killall -9 gzserver gzclient'
+#--------------------------------------------------------------------------------------------------
+# Bash 終端顯示
+echo ""
+echo "------------------- MINI2BOT HOST PC INFO -------------------"
+echo -e "  ROS_MASTER_URI: \033[32m$ROS_MASTER_URI\033[0m"
+echo -e "  HOST PC ROS_IP: \033[32m$ROS_IP\033[0m"
+echo "-------------------------------------------------------------"
+echo ""
+#-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
+EOF
+fi
+
     print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
     echo "=== Script by Chiawei ==="
 }
