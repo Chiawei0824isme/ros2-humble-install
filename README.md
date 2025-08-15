@@ -1,10 +1,21 @@
-<div align="center">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-    <img src="https://classic.gazebosim.org/assets/gazebo_vert-af0a0ada204b42b6daca54e98766979e45e011ea22347ffe90580458476d26d6.png" alt="Gazebo" height="180" style="background-color: white; padding: 10px;">
-    <img src="https://docs.ros.org/en/humble/_static/humble-small.png" alt="ROS 2 Humble" height="180">
-    <img src="https://raw.githubusercontent.com/ros-visualization/rviz/kinetic-devel/images/splash.png" alt="RViz2" height="180">
+<div align="center" style="background-color: white; padding: 20px;">
+  <img src="https://learnopencv.com/wp-content/uploads/2024/06/ros2_humble-1.png" 
+       alt="ROS 2 Humble" height="180" style="background-color: white; padding: 10px;">
+       
+  <div style="display: flex; justify-content: space-evenly; align-items: center; 
+              flex-wrap: wrap; gap: 10px; background-color: white; padding: 10px;">
+    <img src="https://robodyne-services.com/wp-content/uploads/2021/10/Turtlebot3_logo.png" 
+         alt="TurtleBot3 Manipulation" height="180" style="background-color: white; padding: 10px;">
+    <img src="https://raw.githubusercontent.com/ros-visualization/rviz/kinetic-devel/images/splash.png" 
+         alt="RViz2" height="180" style="background-color: white; padding: 10px;">
+    <img src="https://avatars.githubusercontent.com/u/1743799?s=280&v=4" 
+         alt="Gazebo" height="190" style="background-color: white; padding: 10px;">
   </div>
 </div>
+
+
+
+
 
 # ROS 2 Humble Installation & Verification Guide
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
@@ -19,9 +30,12 @@
    - [Run Demo Nodes](#2run-demo-nodes)
    - [Run Turtlesim](#3run-turtlesim)
 4. [Start Gazebo](#4start-gazebo)
-5. [References](#references)
-6. [License](#license)
-7. [Disclaimer & Copyright](#disclaimer--copyright)
+   - [Set Turtlebot3 Model](#Set-Turtlebot3-Model)
+   - [Gazebo TurtleBot3 Simulation](Gazebo-TurtleBot3-Simulation)
+6. [Letgo TurtleBot3](5.Letgo-TurtleBot3)
+7. [References](#references)
+8. [License](#license)
+9. [Disclaimer & Copyright](#disclaimer--copyright)
 
 
 ---
@@ -93,12 +107,63 @@ Launch Gazebo Demo World
 gazebo worlds/rubble.world
 ```
 ---
+# 5.Letgo TurtleBot3 
+## Set Turtlebot3 Model
+Burger(Choose one of the three)
+```
+export TURTLEBOT3_MODEL=burger
+```
+Waffle(Choose one of the three)
+```
+export TURTLEBOT3_MODEL=waffle
+```
+Waffle_pi(Choose one of the three)
+```
+export TURTLEBOT3_MODEL=waffle_pi
+```
+## Gazebo TurtleBot3 Simulation
+Launch Simulation World
+```
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+```
+Operate TurtleBot3(Add new terminal)
+```
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+---
+# 6. Illustrate
+In this installed version, we have added the following features:
+## 1. Gazebo Simulation Settings
+- ROS_DOMAIN_ID: Isolates TurtleBot3 communication to prevent conflicts with other ROS 2 networks.
+- SVGA_VGPU10=0: Ensures Gazebo works correctly in a virtualized GPU environment.
+- TURTLEBOT3_MODEL: Sets the default TurtleBot3 model (waffle) used in the simulation.
+## 2. ROS Host Network Configuration
+- Automatically detects the host PC’s IP address.
+- Sets ROS_IP to allow proper communication for ROS 2 nodes on the network.
+- Ensures ROS nodes running on this host are accessible to other devices.
+## 3. ROS Master Network Configuration
+- ROBOT_IP is assigned for the host machine.
+- Configures ROS_MASTER_URI so all nodes communicate with the correct ROS master.
+## 4. Workspace & Build Shortcuts
+- cw: Navigate to the root of t
+- cs: Navigate to the src folder.
+- cm: Build the ROS 2 workspace using colcon.
+- kg: Quickly terminate all running Gazebo servers and clients.
+## 5. Terminal Display
+- Displays the ROS 2 master URI and host IP when opening a terminal.
+- Provides a quick verification that the environment is configured correctly.
+#### You can open your bash configuration and scroll to the bottom to view the related settings by running:
+```
+gedit ~/.bashrc
+```
+---
 
 ## References
 - [ROS 2 Humble Documentation](https://docs.ros.org/en/humble/index.html)
 - [RViz2](https://docs.ros.org/en/rolling/p/rviz2/__links.html)
 - [Gazebo Documentation](https://gazebosim.org/home)
 - [ROS 2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
+- [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
 
 ## License
 >  This guide is released under the **MIT License**. You are free to use, modify, and distribute it with attribution.
