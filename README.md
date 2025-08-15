@@ -23,27 +23,49 @@
 ![ROS 2 Version](https://img.shields.io/badge/ROS2-Humble-orange)
 
 # Table of Contents
-1. [Install](#1install)
-2. [Build Workspace](#2build)
-3. [Check](#3check)
-   - [Check ROS 2 Related](#1check-ros2-related)
-   - [Run Demo Nodes](#2run-demo-nodes)
-   - [Run Turtlesim](#3run-turtlesim)
-4. [Start Gazebo](#4start-gazebo)
-   - [Set Turtlebot3 Model](#Set-Turtlebot3-Model)
-   - [Gazebo TurtleBot3 Simulation](#Gazebo-TurtleBot3-Simulation)
-5. [Letgo TurtleBot3](#5letgo-turtlebot3)
-   - [Set Turtlebot3 Model](#set-turtlebot3-model)
-   - [Gazebo TurtleBot3 Simulation](#gazebo-turtlebot3-simulation)
-6. [Helpful Instructions](#6helpful-instructions)
-   - [Gazebo Simulation Settings](#1-gazebo-simulation-settings)
-   - [ROS Host Network Configuration](#2-ros-host-network-configuration)
-   - [ROS Master Network Configuration](#3-ros-master-network-configuration)
-   - [Workspace & Build Shortcuts](#4-workspace--build-shortcuts)
-   - [Terminal Display](#5-terminal-display)
-7. [References](#references)
-8. [License](#license)
-9. [Disclaimer & Copyright](#disclaimer--copyright)
+1. [Install](#1install)  
+2. [Build Workspace](#2build)  
+
+<details>
+<summary>3. <a href="#3check">Check</a></summary>
+
+- [Check ROS 2 Related](#1check-ros2-related)  
+- [Run Demo Nodes](#2run-demo-nodes)  
+- [Run Turtlesim](#3run-turtlesim)  
+
+</details>
+
+<details>
+<summary>4. <a href="#4start-gazebo">Start Gazebo</a></summary>
+
+- [Set Turtlebot3 Model](#set-turtlebot3-model)  
+- [Gazebo TurtleBot3 Simulation](#gazebo-turtlebot3-simulation)  
+
+</details>
+
+<details>
+<summary>5. <a href="#5letgo-turtlebot3">Letgo TurtleBot3</a></summary>
+
+- [Set Turtlebot3 Model](#set-turtlebot3-model)  
+- [Gazebo TurtleBot3 Simulation](#gazebo-turtlebot3-simulation)  
+
+</details>
+
+<details>
+<summary>6. <a href="#6helpful-instructions">Helpful Instructions</a></summary>
+
+- [Gazebo Simulation Settings](#1-gazebo-simulation-settings)  
+- [ROS Host Network Configuration](#2-ros-host-network-configuration)  
+- [ROS Master Network Configuration](#3-ros-master-network-configuration)  
+- [Workspace & Build Shortcuts](#4-workspace--build-shortcuts)  
+- [Terminal Display](#5-terminal-display)  
+
+</details>
+
+7. [References](#references)  
+8. [License](#license)  
+9. [Disclaimer & Copyright](#disclaimer--copyright)  
+
 
 
 ---
