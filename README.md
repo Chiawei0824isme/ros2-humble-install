@@ -48,8 +48,6 @@ colcon build
 ls
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-
-
 ```
 # 3.Check
 ## 1.Check ROS2 related
