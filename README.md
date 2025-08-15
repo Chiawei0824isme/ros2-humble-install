@@ -46,8 +46,8 @@
 <details>
 <summary>5. <a href="#5letgo-turtlebot3">Letgo TurtleBot3</a></summary>
 
-- [Set Turtlebot3 Model](#set-turtlebot3-model)  
-- [Gazebo TurtleBot3 Simulation](#gazebo-turtlebot3-simulation)  
+- [Set Turtlebot3 Model](#1.set-turtlebot3-model)  
+- [Gazebo TurtleBot3 Simulation](#2.gazebo-turtlebot3-simulation)  
 
 </details>
 
@@ -138,7 +138,7 @@ gazebo worlds/rubble.world
 ```
 ---
 # 5.Letgo TurtleBot3 
-## Set Turtlebot3 Model
+## 1.Set Turtlebot3 Model
 Burger(Choose one of the three)
 ```
 export TURTLEBOT3_MODEL=burger
@@ -151,7 +151,7 @@ Waffle_pi(Choose one of the three)
 ```
 export TURTLEBOT3_MODEL=waffle_pi
 ```
-## Gazebo TurtleBot3 Simulation
+## 2.Gazebo TurtleBot3 Simulation
 Launch Simulation World
 ```
 ros2 launch turtlebot3_gazebo empty_world.launch.py
