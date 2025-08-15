@@ -170,42 +170,43 @@ main() {
     esac
 
     echo ""
-    cat << 'EOF' >> ~/.bashrc
-    #-------------MINI2BOT HOSTPCCONFIG---------------------------------------------------------------
-    # ROS2 環境配置
-    source /opt/ros/humble/setup.bash
-    source ~/turtlebot3_ws/install/setup.bash
-    source /usr/share/gazebo/setup.sh
-    #--------------------------------------------------------------------------------------------------
-    # Gazebo 環境配置
-    export ROS_DOMAIN_ID=30 #TURTLEBOT3
-    export SVGA_VGPU10=0
-    export TURTLEBOT3_MODEL=waffle
-    #--------------------------------------------------------------------------------------------------
-    # ROS_Host 網路配置
-    interface=ens33
-    export IPAddress=$(ip -4 addr show $interface | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
-    export ROS_IP=$IPAddress
-    #--------------------------------------------------------------------------------------------------
-    # ROS_Master 網路地址
-    export ROBOT_IP=$IPAddress
-    export ROS_MASTER_URI=http://$ROBOT_IP:11311
-    #--------------------------------------------------------------------------------------------------
-    # Alias path 跳轉快捷指令
-    alias cw='cd ~/turtlebot3_ws'
-    alias cs='cd ~/turtlebot3_ws/src'
-    alias cm='cd ~/turtlebot3_ws && colcon build '
-    alias kg='killall -9 gzserver gzclient'
-    #--------------------------------------------------------------------------------------------------
-    # Bash 終端顯示
-    echo ""
-    echo "------------------- MINI2BOT HOST PC INFO -------------------"
-    echo -e "  ROS_MASTER_URI: \033[32m$ROS_MASTER_URI\033[0m"
-    echo -e "  HOST PC ROS_IP: \033[32m$ROS_IP\033[0m"
-    echo "-------------------------------------------------------------"
-    echo ""
-    #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
+cat << EOF >> ~/.bashrc
+#-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
+# ROS2 環境配置
+source /opt/ros/humble/setup.bash
+source ~/turtlebot3_ws/install/setup.bash
+source /usr/share/gazebo/setup.sh
+#--------------------------------------------------------------------------------------------------
+# Gazebo 環境配置
+export ROS_DOMAIN_ID=30 #TURTLEBOT3
+export SVGA_VGPU10=0
+export TURTLEBOT3_MODEL=waffle
+#--------------------------------------------------------------------------------------------------
+# ROS_Host 網路配置
+interface=ens33
+export IPAddress=\$(ip -4 addr show \$interface | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+export ROS_IP=\$IPAddress
+#--------------------------------------------------------------------------------------------------
+# ROS_Master 網路地址
+export ROBOT_IP=\$IPAddress
+export ROS_MASTER_URI=http://\$ROBOT_IP:11311
+#--------------------------------------------------------------------------------------------------
+# Alias path 跳轉快捷指令
+alias cw='cd ~/turtlebot3_ws'
+alias cs='cd ~/turtlebot3_ws/src'
+alias cm='cd ~/turtlebot3_ws && colcon build '
+alias kg='killall -9 gzserver gzclient'
+#--------------------------------------------------------------------------------------------------
+# Bash 終端顯示
+echo ""
+echo "------------------- MINI2BOT HOST PC INFO -------------------"
+echo -e "  ROS_MASTER_URI: \033[32m\$ROS_MASTER_URI\033[0m"
+echo -e "  HOST PC ROS_IP: \033[32m\$ROS_IP\033[0m"
+echo "-------------------------------------------------------------"
+echo ""
+#-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 EOF
+    
 print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
 echo "=== Script by Chiawei ==="
 }
