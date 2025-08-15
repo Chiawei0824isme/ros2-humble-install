@@ -99,6 +99,7 @@ install_turtlebot3() {
     cd ~/turtlebot3_ws && colcon build --symlink-install
 
     print_step "TurtleBot3 安裝完成"
+    echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
     source ~/.bashrc
 
 }
@@ -118,7 +119,8 @@ show_menu() {
 main() {
     check_ubuntu
     show_menu
-    read -p "請選擇安裝選項 (1/2/3): " choice
+    echo -n "請選擇安裝選項 (1/2/3): "
+    read choice
 
     case $choice in
         1)
@@ -168,16 +170,8 @@ main() {
     esac
 
     echo ""
-    print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
-    echo "=== Script by Chiawei ==="
-}
-
-main
-
-}
-
-main
-OSTPC CONFIG---------------------------------------------------------------
+    cat << 'EOF' >> ~/.bashrc
+#-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 # ROS2 環境配置
 source /opt/ros/humble/setup.bash
 source ~/turtlebot3_ws/install/setup.bash
@@ -190,7 +184,7 @@ export TURTLEBOT3_MODEL=waffle
 #--------------------------------------------------------------------------------------------------
 # ROS_Host 網路配置
 interface=ens33
-export IPAddress=`ifconfig $interface | grep -o 'inet [^ ]*' | cut -d " " -f2`
+export IPAddress=$(ip -4 addr show $interface | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 export ROS_IP=$IPAddress
 #--------------------------------------------------------------------------------------------------
 # ROS_Master 網路地址
@@ -212,8 +206,7 @@ echo "-------------------------------------------------------------"
 echo ""
 #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 EOF
-fi
-
+    
     print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
     echo "=== Script by Chiawei ==="
 }
