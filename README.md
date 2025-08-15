@@ -38,15 +38,17 @@ chmod +x install_ros2_humble_gazebo.sh
 # 2.Build
 Build workspace
 ```
+source /opt/ros/humble/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/ros/ros_tutorials.git -b humble
-source /opt/ros/humble/setup.bash
-cd ~/ros2_ws
+cd ..
+rosdep install -i --from-path src --rosdistro humble -y
 colcon build
-source install/setup.bash
+ls
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+
 
 ```
 # 3.Check
