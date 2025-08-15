@@ -99,7 +99,6 @@ install_turtlebot3() {
     cd ~/turtlebot3_ws && colcon build --symlink-install
 
     print_step "TurtleBot3 安裝完成"
-    echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
     source ~/.bashrc
 
 }
