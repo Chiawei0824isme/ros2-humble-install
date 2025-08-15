@@ -33,9 +33,10 @@
    - [Set Turtlebot3 Model](#Set-Turtlebot3-Model)
    - [Gazebo TurtleBot3 Simulation](#Gazebo-TurtleBot3-Simulation)
 5. [Letgo TurtleBot3](#5.Letgo-TurtleBot3)
-6. [References](#references)
-7. [License](#license)
-8. [Disclaimer & Copyright](#disclaimer--copyright)
+6. [Illustrate](#6.Illustrate)
+7. [References](#references)
+8. [License](#license)
+9. [Disclaimer & Copyright](#disclaimer--copyright)
 
 
 ---
@@ -131,7 +132,7 @@ Operate TurtleBot3(Add new terminal)
 ros2 run turtlebot3_teleop teleop_keyboard
 ```
 ---
-# 6. Illustrate
+# 6.Illustrate
 In this installed version, we have added the following features:
 ## 1. Gazebo Simulation Settings
 - ROS_DOMAIN_ID: Isolates TurtleBot3 communication to prevent conflicts with other ROS 2 networks.
