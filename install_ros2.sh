@@ -45,7 +45,7 @@ install_ros2_base() {
     sudo apt install -y ros-humble-desktop
     sudo apt install -y ros-humble-ros-base
     sudo apt install -y ros-dev-tools
-    sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
+    sudo apt install -y ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
 
     print_step "Step 5: 初始化 rosdep"
     if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
@@ -56,7 +56,6 @@ install_ros2_base() {
     print_step "Step 6: 設定環境"
     source /opt/ros/humble/setup.bash
 
-    # 設定 bashrc
     grep -v "source /opt/ros/humble/setup.bash" ~/.bashrc > ~/.bashrc.tmp || true
     mv ~/.bashrc.tmp ~/.bashrc
     echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
@@ -68,17 +67,12 @@ install_gazebo() {
     print_step "安裝 Gazebo 套件"
     sudo apt install -y ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
     print_step "Gazebo 安裝完成"
-    
 }
 
 # ---------------- TurtleBot3 安裝 ----------------
 install_turtlebot3() {
     print_step "安裝依賴的 ROS 2 套件"
-    sudo apt install ros-humble-gazebo-*
-    sudo apt install ros-humble-cartographer
-    sudo apt install ros-humble-cartographer-ros
-    sudo apt install ros-humble-navigation2
-    sudo apt install ros-humble-nav2-bringup
+    sudo apt install -y ros-humble-gazebo-* ros-humble-cartographer ros-humble-cartographer-ros ros-humble-navigation2 ros-humble-nav2-bringup
 
     print_step "安裝 TurtleBot3 軟體包"
     source /opt/ros/humble/setup.bash
@@ -87,7 +81,7 @@ install_turtlebot3() {
     git clone -b humble https://github.com/ROBOTIS-GIT/DynamixelSDK.git
     git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
     git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3.git
-    sudo apt install python3-colcon-common-extensions
+    sudo apt install -y python3-colcon-common-extensions
     cd ~/turtlebot3_ws
     colcon build --symlink-install
     echo 'source ~/turtlebot3_ws/install/setup.bash' >> ~/.bashrc
@@ -101,7 +95,6 @@ install_turtlebot3() {
     print_step "TurtleBot3 安裝完成"
     echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
     source ~/.bashrc
-
 }
 
 # ---------------- 主選單 ----------------
@@ -127,41 +120,13 @@ main() {
             install_ros2_base
             install_gazebo
             install_turtlebot3
-            print_step "安裝完成: ROS2 Humble + Gazebo + TurtleBot3"
-            echo "安裝版本 : $ROS_DISTRO"
-            echo "開新終端機後輸入以下指令進行測試："
-            
-            
-            echo "1. ros2 run demo_nodes_cpp talker                              # C++ 範例發布者"
-            echo "2. ros2 run demo_nodes_cpp listener                            # C++ 範例訂閱者     [新增終端機]"
-            echo "3. ros2 run demo_nodes_py talker                               # Python 範例發布者  "
-            echo "4. ros2 run demo_nodes_py listener                             # Python 範例訂閱者  [新增終端機]"
-            echo "5. ros2 run turtlesim turtlesim_node                           # Turtlesim節點      "
-            echo "6. ros2 run turtlesim turtle_teleop_key                        # Turtle Teleop      [新增終端機]"
-            echo "7. gazebo                                                      # 開啟Gazebo" 
-            echo "8. ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py    #開啟turtlebot3_gazebo World"
             ;;
         2)
             install_ros2_base
             install_gazebo
-            print_step "安裝完成: ROS2 Humble + Gazebo"
-            echo "安裝版本 : $ROS_DISTRO"
-            echo "1. ros2 run demo_nodes_cpp talker                              # C++ 範例發布者"
-            echo "2. ros2 run demo_nodes_cpp listener                            # C++ 範例訂閱者     [新增終端機]"
-            echo "3. ros2 run demo_nodes_py talker                               # Python 範例發布者  "
-            echo "4. ros2 run demo_nodes_py listener                             # Python 範例訂閱者  [新增終端機]"
-            echo "5. ros2 run turtlesim turtlesim_node                           # Turtlesim節點      "
-            echo "6. ros2 run turtlesim turtle_teleop_key                        # Turtle Teleop      [新增終端機]"
-            echo "7. gazebo                                                      # 開啟Gazebo" 
             ;;
         3)
             install_ros2_base
-            print_step "安裝完成: ROS2 Humble"
-            echo "安裝版本 : $ROS_DISTRO"
-            echo "1. ros2 run demo_nodes_cpp talker                              # C++ 範例發布者"
-            echo "2. ros2 run demo_nodes_cpp listener                            # C++ 範例訂閱者     [新增終端機]"
-            echo "3. ros2 run demo_nodes_py talker                               # Python 範例發布者  "
-            echo "4. ros2 run demo_nodes_py listener                             # Python 範例訂閱者  [新增終端機]"
             ;;
         *)
             print_error "無效選項，程式結束"
@@ -169,7 +134,7 @@ main() {
             ;;
     esac
 
-    echo ""
+    # 追加 MINI2BOT HostPC 環境到 .bashrc
 cat << 'EOF' >> ~/.bashrc
 #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 # ROS2 環境配置
@@ -207,9 +172,8 @@ echo ""
 #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 EOF
 
-    
-print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
-echo "=== Script by Chiawei ==="
+    print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
+    echo "=== Script by Chiawei ==="
 }
 
 main
