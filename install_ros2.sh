@@ -206,8 +206,8 @@ main() {
     echo ""
     #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
     EOF
-    print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
-    echo "=== Script by Chiawei ==="
+print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
+echo "=== Script by Chiawei ==="
 }
 
 main
