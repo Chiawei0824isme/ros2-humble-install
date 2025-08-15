@@ -170,7 +170,7 @@ main() {
     esac
 
     echo ""
-cat << EOF >> ~/.bashrc
+cat << 'EOF' >> ~/.bashrc
 #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 # ROS2 環境配置
 source /opt/ros/humble/setup.bash
@@ -184,12 +184,12 @@ export TURTLEBOT3_MODEL=waffle
 #--------------------------------------------------------------------------------------------------
 # ROS_Host 網路配置
 interface=ens33
-export IPAddress=\$(ip -4 addr show \$interface | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
-export ROS_IP=\$IPAddress
+export IPAddress=$(ip -4 addr show $interface | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+export ROS_IP=$IPAddress
 #--------------------------------------------------------------------------------------------------
 # ROS_Master 網路地址
-export ROBOT_IP=\$IPAddress
-export ROS_MASTER_URI=http://\$ROBOT_IP:11311
+export ROBOT_IP=$IPAddress
+export ROS_MASTER_URI=http://$ROBOT_IP:11311
 #--------------------------------------------------------------------------------------------------
 # Alias path 跳轉快捷指令
 alias cw='cd ~/turtlebot3_ws'
@@ -200,12 +200,13 @@ alias kg='killall -9 gzserver gzclient'
 # Bash 終端顯示
 echo ""
 echo "------------------- MINI2BOT HOST PC INFO -------------------"
-echo -e "  ROS_MASTER_URI: \033[32m\$ROS_MASTER_URI\033[0m"
-echo -e "  HOST PC ROS_IP: \033[32m\$ROS_IP\033[0m"
+echo -e "  ROS_MASTER_URI: \033[32m$ROS_MASTER_URI\033[0m"
+echo -e "  HOST PC ROS_IP: \033[32m$ROS_IP\033[0m"
 echo "-------------------------------------------------------------"
 echo ""
 #-------------MINI2BOT HOSTPC CONFIG---------------------------------------------------------------
 EOF
+
     
 print_warning "請重新開啟終端機或執行 'source ~/.bashrc' 來載入新環境"
 echo "=== Script by Chiawei ==="
