@@ -41,9 +41,13 @@ Build workspace
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/ros/ros_tutorials.git -b humble
+source /opt/ros/humble/setup.bash
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
 ```
 # 3.Check
 ## 1.Check ROS2 related
