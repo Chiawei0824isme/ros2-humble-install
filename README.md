@@ -173,6 +173,7 @@ In this installed version, we have added the following features:
 - TURTLEBOT3_MODEL: Sets the default TurtleBot3 model (waffle) used in the simulation.
 ## 2. ROS Host Network Configuration
 - Automatically detects the host PC’s IP address.
+(If you're using a Raspberry Pi, you need to change it to "interface=wlan0" )
 - Sets ROS_IP to allow proper communication for ROS 2 nodes on the network.
 - Ensures ROS nodes running on this host are accessible to other devices.
 ## 3. ROS Master Network Configuration
