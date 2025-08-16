@@ -45,7 +45,7 @@ install_ros2_base() {
     sudo apt install -y ros-humble-desktop
     sudo apt install -y ros-humble-ros-base
     sudo apt install -y ros-dev-tools
-    sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
+    sudo apt install ros-humble-nav2-bringup
 
     print_step "Step 5: 初始化 rosdep"
     if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
@@ -67,6 +67,7 @@ install_ros2_base() {
 install_gazebo() {
     print_step "安裝 Gazebo 套件"
     sudo apt install -y ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros
+    
     print_step "Gazebo 安裝完成"
     
 }
