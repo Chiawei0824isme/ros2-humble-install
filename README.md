@@ -17,10 +17,14 @@
 
 
 
-# ROS 2 Humble Installation & Verification Guide
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![ROS 2 Version](https://img.shields.io/badge/ROS2-Humble-orange)
+# ROS 2 Humble Installation & Verification Guide 
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![ROS 2 Version](https://img.shields.io/badge/ROS2-Humble-orange)
+
+### Three options are available:
+1. ROS2 Humble + Gazebo + TurtleBot3
+2. ROS2 Humble + Gazebo
+3. ROS2 Humble
+---
 
 # Table of Contents
 1. [Install](#1install)  
