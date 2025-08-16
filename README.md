@@ -18,8 +18,7 @@
 
 
 # ROS 2 Humble Installation & Verification Guide 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![ROS 2 Version](https://img.shields.io/badge/ROS2-Humble-orange)
-
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![ROS 2 Version](https://img.shields.io/badge/ROS2-Humble-orange)<br>
 ### Three options are available:
 1. ROS2 Humble + Gazebo + TurtleBot3
 2. ROS2 Humble + Gazebo
@@ -172,12 +171,12 @@ In this installed version, we have added the following features:
 - SVGA_VGPU10=0: Ensures Gazebo works correctly in a virtualized GPU environment.
 - TURTLEBOT3_MODEL: Sets the default TurtleBot3 model (waffle) used in the simulation.
 ## 2. ROS Host Network Configuration
-- Automatically detects the host PC’s IP address.
+- Automatically detects the host PC’s IP address.<br>
 (If you're using a Raspberry Pi, you need to change it to "interface=wlan0" )
 - Sets ROS_IP to allow proper communication for ROS 2 nodes on the network.
 - Ensures ROS nodes running on this host are accessible to other devices.
 ## 3. ROS Master Network Configuration
-- ROBOT_IP is assigned for the host machine.
+- ROBOT_IP is assigned for the host machine.  
 - Configures ROS_MASTER_URI so all nodes communicate with the correct ROS master.
 ## 4. Workspace & Build Shortcuts
 - cw: Navigate to the root of t
