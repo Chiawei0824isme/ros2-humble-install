@@ -154,7 +154,7 @@ export TURTLEBOT3_MODEL=waffle_pi
 ## 2.Gazebo TurtleBot3 Simulation
 Launch Simulation World
 ```
-ros2 launch turtlebot3_gazebo empty_world.launch.py
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
 ```
 Operate TurtleBot3(Add new terminal)
 ```
