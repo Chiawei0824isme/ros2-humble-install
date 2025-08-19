@@ -142,15 +142,15 @@ gazebo worlds/rubble.world
 ---
 # 5.Letgo TurtleBot3 
 ## 1.Set Turtlebot3 Model
-Burger(Choose one of the three)
+Burger (Choose one of the three)
 ```
 export TURTLEBOT3_MODEL=burger
 ```
-Waffle(Choose one of the three) (Default)
+Waffle (Choose one of the three) (Default)
 ```
 export TURTLEBOT3_MODEL=waffle
 ```
-Waffle_pi(Choose one of the three)
+Waffle_pi (Choose one of the three)
 ```
 export TURTLEBOT3_MODEL=waffle_pi
 ```
