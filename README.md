@@ -146,7 +146,7 @@ Burger(Choose one of the three)
 ```
 export TURTLEBOT3_MODEL=burger
 ```
-Waffle(Choose one of the three)(default)
+Waffle(Choose one of the three) (Default)
 ```
 export TURTLEBOT3_MODEL=waffle
 ```
